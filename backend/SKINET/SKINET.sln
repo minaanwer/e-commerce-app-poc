@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKINET", "SKINET\SKINET.csproj", "{62FF2289-4B9B-4A53-9FEA-B69A373811BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{D44DE25A-D992-415C-936D-DF984D4B2282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{DEDF7A00-FC68-425C-BB2A-C6018664167B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62FF2289-4B9B-4A53-9FEA-B69A373811BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FF2289-4B9B-4A53-9FEA-B69A373811BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FF2289-4B9B-4A53-9FEA-B69A373811BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FF2289-4B9B-4A53-9FEA-B69A373811BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44DE25A-D992-415C-936D-DF984D4B2282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44DE25A-D992-415C-936D-DF984D4B2282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44DE25A-D992-415C-936D-DF984D4B2282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44DE25A-D992-415C-936D-DF984D4B2282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDF7A00-FC68-425C-BB2A-C6018664167B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDF7A00-FC68-425C-BB2A-C6018664167B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDF7A00-FC68-425C-BB2A-C6018664167B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDF7A00-FC68-425C-BB2A-C6018664167B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EEA9E67-F84A-4E8B-915C-625EC5DD9880}
+	EndGlobalSection
+EndGlobal
