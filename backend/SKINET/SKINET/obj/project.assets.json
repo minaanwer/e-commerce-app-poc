@@ -674,7 +674,8 @@
         "dependencies": {
           "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
-          "Microsoft.EntityFrameworkCore.Relational": "7.0.5"
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5"
         },
         "compile": {
           "bin/placeholder/Infrastructure.dll": {}
