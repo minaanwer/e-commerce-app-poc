@@ -13,9 +13,12 @@ namespace Infrastructure.Data
             _context = context;
         }
 
-        public async Task<Product> GetProductAsync(int id)
+      
+      
+
+        public async Task<IReadOnlyList<Product>> GetProductsAsync()
         {
-            return await _context.Products.FindAsync(id);
+            return await _context.Products.Include(x=>x.ProductTypeId).Include(x=>x.ProductBrandId).ToListAsync();
         }
 
         public async Task<List<ProductBrand>> GetProductBrandsAsync()
@@ -23,14 +26,14 @@ namespace Infrastructure.Data
             return await _context.ProductBrands.ToListAsync();
         }
 
-        public async Task<IReadOnlyList<Product>> GetProductsAsync()
-        {
-            return await _context.Products.ToListAsync();
-        }
-
         public async Task<List<ProductType>> GetProductTypesAsync()
         {
             return await _context.ProductTypes.ToListAsync();
         }
+        public async Task<Product> GetProductAsync(int id)
+        {
+            return await _context.Products.Include(x => x.ProductTypeId).Include(x => x.ProductBrandId).FirstOrDefaultAsync(x=>x.Id==id);
+        }
+
     }
 }
