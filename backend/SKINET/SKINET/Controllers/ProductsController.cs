@@ -22,8 +22,24 @@ namespace SKINET.Controllers
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts()
         {
-           return  Ok( _productRepo.GetProductsAsync());
+           return  Ok(await _productRepo.GetProductsAsync());
                
+        }
+
+        [HttpGet]
+        [Route("{brands}")]
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrands()
+        {
+            return  Ok(await _productRepo.GetProductBrandsAsync());
+
+        }
+
+        [HttpGet]
+        [Route("{types}")]
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()
+        {
+            return Ok(await _productRepo.GetProductTypesAsync());
+
         }
 
         [HttpGet]
