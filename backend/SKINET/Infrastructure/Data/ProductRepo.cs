@@ -28,7 +28,10 @@ namespace Infrastructure.Data
         }
         public async Task<Product> GetProductAsync(int id)
         {
-            return await _context.Products.Include(x => x.ProductTypeId).Include(x => x.ProductBrandId).FirstOrDefaultAsync(x=>x.Id==id);
+            return await _context.Products
+                .Include(x => x.ProductTypeId)
+                .Include(x => x.ProductBrandId)
+                .FirstOrDefaultAsync(x=>x.Id==id);
         }
     }
 }

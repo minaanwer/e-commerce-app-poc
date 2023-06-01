@@ -12,33 +12,40 @@ namespace SKINET.Controllers
     [Route("api/[Controller]")]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductRepo _productRepo;
+        private readonly IGenericRepository<Product> _productRepo;
+        private readonly IGenericRepository<ProductBrand> _productBrandRepo;
+        private readonly IGenericRepository<ProductType> _productTypeRepo;
 
-        public ProductsController(IProductRepo productRepo)
+        public ProductsController(IGenericRepository<Product> productRepo ,
+            IGenericRepository<ProductBrand> productBrand,
+            IGenericRepository<ProductType> productType)
         {
+             
             this._productRepo = productRepo;
+            this._productBrandRepo = productBrand;
+            this._productTypeRepo = productType;
         }
 
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts()
         {
-           return  Ok(await _productRepo.GetProductsAsync());
+           return  Ok(await _productRepo.ListAllAsync());
                
         }
 
-        [HttpGet]
-        [Route("{brands}")]
+        [HttpGet("brands")]
+        
         public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrands()
         {
-            return  Ok(await _productRepo.GetProductBrandsAsync());
+            return  Ok(await _productBrandRepo.ListAllAsync());
 
         }
 
-        [HttpGet]
-        [Route("{types}")]
+        [HttpGet("types")]
+        
         public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()
         {
-            return Ok(await _productRepo.GetProductTypesAsync());
+            return Ok(await _productTypeRepo.ListAllAsync());
 
         }
 
@@ -46,7 +53,7 @@ namespace SKINET.Controllers
         [Route("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            return await _productRepo.GetProductAsync(id);
+            return await _productRepo.GetByIdAsync(id);
         }
     }
 }

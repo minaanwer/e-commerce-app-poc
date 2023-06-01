@@ -6,6 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IProductRepo, ProductRepo>();
+
+builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRespository<>));
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<StoreContext>(opt =>
