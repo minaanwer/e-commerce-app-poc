@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
 {
-
     public class ProductRepo : IProductRepo
     {
         private readonly StoreContext _context;
@@ -12,9 +11,6 @@ namespace Infrastructure.Data
         {
             _context = context;
         }
-
-      
-      
 
         public async Task<IReadOnlyList<Product>> GetProductsAsync()
         {
@@ -34,6 +30,5 @@ namespace Infrastructure.Data
         {
             return await _context.Products.Include(x => x.ProductTypeId).Include(x => x.ProductBrandId).FirstOrDefaultAsync(x=>x.Id==id);
         }
-
     }
 }

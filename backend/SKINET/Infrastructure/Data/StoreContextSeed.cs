@@ -13,6 +13,7 @@ namespace Infrastructure.Data
                 var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandData);
                 context.ProductBrands.AddRange(brands);
             }
+         
             if (!context.ProductTypes.Any())
             {
                 var productTypeData = File.ReadAllText("../InfraStructure/Data/SeedData/types.json");
@@ -31,9 +32,6 @@ namespace Infrastructure.Data
             {
                 await context.SaveChangesAsync();
             }
-
         }
-
-
     }
 }
