@@ -28,17 +28,18 @@ namespace SKINET.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts()
-        { 
-            return Ok(await _productRepo.ListAsync(new ProductsWithTypesAndBrandsSpecification()));
+        public async Task<ActionResult<IReadOnlyList<ProductToReturnDto>>> GetProducts()
+        {
+            var products = await _productRepo.ListAsync(new ProductsWithTypesAndBrandsSpecification());
+            return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products));
         }
 
         [HttpGet]
         [Route("{id}")]
         public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
         {
-            var product =  await _productRepo.GetEntityWithSpecs(new ProductsWithTypesAndBrandsSpecification(id));
-           return _mapper.Map<Product,ProductToReturnDto>(product);
+            var product = await _productRepo.GetEntityWithSpecs(new ProductsWithTypesAndBrandsSpecification(id));
+            return _mapper.Map<Product, ProductToReturnDto>(product);
         }
 
         [HttpGet("brands")]

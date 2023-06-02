@@ -145,3 +145,4 @@ D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\ref\SKINET.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\AutoMapper.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\SKINET.staticwebassets.runtime.json
