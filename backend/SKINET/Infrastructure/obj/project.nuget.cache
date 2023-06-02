@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "VKSyx6FnnLsrnd4c6rbvNwQsRtdiIZb6l2IoAzTWPFu7ata4HY0gxVTgEkxJQf+BixBtvbBNZRRTn2eKr4fTIQ==",
+  "dgSpecHash": "Wq2SrMxMdZCoC84r+RfCcyORB2HCUnRugH+/+kwdKokabIuI/gn6/pzCntSZRTbSjSeSx+dfg/noB3UL7urzNw==",
   "success": true,
   "projectFilePath": "D:\\Githup Repo\\2023-dev\\e-commerce-app-poc\\backend\\SKINET\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\m.lewes\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\m.lewes\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",

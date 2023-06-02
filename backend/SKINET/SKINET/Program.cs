@@ -1,20 +1,25 @@
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Data;
 using Core.Interfaces;
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddScoped<IProductRepo, ProductRepo>();
-
-builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRespository<>));
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<StoreContext>(opt =>
 {
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<IProductRepo, ProductRepo>();
+
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRespository<>));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
