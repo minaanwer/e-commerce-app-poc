@@ -1,0 +1,21 @@
+﻿using Core.Entities;
+using Core.Specifications;
+using Microsoft.EntityFrameworkCore;
+
+namespace Infrastructure.Data
+{
+    internal class SpecificationEvaluator<TEntity> where TEntity : BaseEntity
+    {
+        public static IQueryable<TEntity> GetQuery(IQueryable<TEntity> inputQuery, ISpecification<TEntity> spec)
+        {
+            var query = inputQuery;
+
+            if (spec.Criteria != null)
+            {
+                query = query.Where(spec.Criteria); //should be modified to list of specs 
+            }
+            query = spec.Includes.Aggregate(query, (current, includeItem) => current.Include(includeItem));
+            return query;
+        }
+    }
+}
