@@ -14,7 +14,7 @@ namespace Infrastructure.Data
             {
                 query = query.Where(spec.Criteria); //should be modified to list of specs 
             }
-            query = spec.Includes.Aggregate(query, (current, includeItem) => current.Include(includeItem));
+            query = spec.Includes.Aggregate(query, (current, include) => current.Include(include));
             return query;
         }
     }
