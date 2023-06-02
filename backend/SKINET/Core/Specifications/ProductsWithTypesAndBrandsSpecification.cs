@@ -6,14 +6,14 @@ namespace Core.Specifications
     {
         public ProductsWithTypesAndBrandsSpecification()
         {
-            base.AddInclude(x => x.ProductTypeId);
-            base.AddInclude(x => x.ProductBrandId);
+            base.AddInclude(x => x.ProductType);
+            base.AddInclude(x => x.ProductBrand);
         }
 
         public ProductsWithTypesAndBrandsSpecification(int id):base(x=>x.Id ==id)
         {
-            base.AddInclude(x => x.ProductTypeId);
-            base.AddInclude(x => x.ProductBrandId);
+            base.AddInclude(x => x.ProductType);
+            base.AddInclude(x => x.ProductBrand);
         }
     }
 }
