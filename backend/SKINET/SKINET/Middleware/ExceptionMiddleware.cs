@@ -28,10 +28,12 @@ namespace SKINET.Middleware
                _logger.LogError(ex,ex.Message);
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                var resonse = true
+                var resonse = _env.IsDevelopment()
                     ? new ApiException((int)(HttpStatusCode.InternalServerError), ex.Message, ex.StackTrace.ToString())
                     : new ApiException((int)HttpStatusCode.InternalServerError);
-                var json = JsonSerializer.Serialize(resonse);
+                //var options  = new JsonSerializerOptions( JsonNamingPolicy.CamelCase)
+
+                var json = JsonSerializer.Serialize(resonse/*,options*/);
                 await context.Response.WriteAsync(json);
             }
         }

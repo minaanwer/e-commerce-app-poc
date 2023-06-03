@@ -3,14 +3,15 @@ using SKINET.Error;
 
 namespace SKINET.Controllers
 {
-    //[Route("errors/{code}")]
-    //public class ErrorController : BaseApiController
-    //{
+    [Route("errors/{code}")]
+    [ApiExplorerSettings(IgnoreApi =true)]
+    public class ErrorController : BaseApiController
+    {
 
-      
-    //    public IActionResult Error(int code)
-    //    {
-    //        return new ObjectResult(new ApiResponse(code));
-    //    }
-    //}
+
+        public IActionResult Error(int code)
+        {
+            return new ObjectResult(new ApiResponse(code));
+        }
+    }
 }
