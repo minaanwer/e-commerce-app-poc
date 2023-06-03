@@ -4,6 +4,8 @@ using Core.Interfaces;
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using SKINET.Middleware;
+using Microsoft.AspNetCore.Mvc;
+using SKINET.Error;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,23 @@ builder.Services.AddScoped<IProductRepo, ProductRepo>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRespository<>));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddLogging(logging => logging.AddConsole());
+builder.Services.Configure<ApiBehaviorOptions>(option =>
+{
+    option.InvalidModelStateResponseFactory = actionContext =>
+    {
+        var errors = actionContext.ModelState.Where(e => e.Value.Errors.Count > 0)
+        .SelectMany(x => x.Value.Errors)
+        .Select(x => x.ErrorMessage).ToArray();
+
+        var errorResponse = new ApiValidationErrorResponse
+        {
+            Errors = errors
+        };
+        return new BadRequestObjectResult(errorResponse);
+    };
+});
+
+
 
 var app = builder.Build();
 app.UseMiddleware<ExceptionMiddleware>();
