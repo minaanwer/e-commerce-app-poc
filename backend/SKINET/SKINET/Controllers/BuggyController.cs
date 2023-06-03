@@ -14,11 +14,27 @@ namespace SKINET.Controllers
 
 
         [HttpGet("notfound")]
-        public ActionResult getNotFound()
+        public ActionResult GetNotFoundRequest()
         {
+            var thing = _context.Products.Find(44);
+            if(thing == null)
+            {
+                return NotFound(new Error.ApiResponse(404));
+            }
+
             return Ok();
         }
 
-        
+
+        [HttpGet("servererror")]
+        public ActionResult GetServerError()
+        {
+            var thing = _context.Products.Find(44);
+            thing.ToString(); //this code will generate server error
+
+            return Ok();
+        }
+
+
     }
 }

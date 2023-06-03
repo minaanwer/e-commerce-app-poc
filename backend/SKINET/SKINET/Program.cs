@@ -18,9 +18,11 @@ builder.Services.AddScoped<IProductRepo, ProductRepo>();
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRespository<>));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddLogging(logging => logging.AddConsole());
 
 var app = builder.Build();
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
+ 
 
 if (app.Environment.IsDevelopment())
 {
@@ -36,7 +38,7 @@ app.MapControllers();
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 var context = services.GetRequiredService<StoreContext>();
-//var logger = services.GetRequiredService<ILogger>();
+var logger = services.GetService<ILogger>();
 try
 {
     await context.Database.MigrateAsync();
@@ -44,7 +46,7 @@ try
 }
 catch (Exception ex)
 {
-   // logger.LogError(ex, "error ocurred during migration");
+    logger.LogError(ex, "error ocurred during migration");
 }
 
 app.Run();

@@ -701,7 +701,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "Microsoft.Extensions.Logging": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Core.dll": {}
@@ -719,7 +720,8 @@
           "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5"
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5",
+          "Microsoft.Extensions.Logging": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Infrastructure.dll": {}
@@ -1891,6 +1893,7 @@
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.5",
+      "Microsoft.Extensions.Logging >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -1966,6 +1969,10 @@
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[7.0.5, )"
+          },
+          "Microsoft.Extensions.Logging": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
