@@ -3,6 +3,7 @@ using Infrastructure.Data;
 using Core.Interfaces;
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
+using SKINET.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddLogging(logging => logging.AddConsole());
 
 var app = builder.Build();
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseStatusCodePagesWithReExecute("/errors/{0}");
  
 
