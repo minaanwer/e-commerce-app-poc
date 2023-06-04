@@ -9,9 +9,10 @@ namespace Core.Specifications
 {
     public class ProductWithFilterAndCountSpecification : BaseSpecification<Product>
     {
-        public ProductWithFilterAndCountSpecification(ProductSpecParams productParams)
-                  : base(x => (!productParams.BrandId.HasValue || x.ProductBrandId == productParams.BrandId.Value)
-                  && (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId.Value))
+        public ProductWithFilterAndCountSpecification(ProductSpecParams productParams) : base(x =>
+            (string.IsNullOrEmpty(productParams.Search) || x.Name.ToLower().Contains(productParams.Search))
+            && (!productParams.BrandId.HasValue || x.ProductBrandId == productParams.BrandId.Value)
+            && (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId.Value))
         {
 
             base.AddInclude(x => x.ProductType);
