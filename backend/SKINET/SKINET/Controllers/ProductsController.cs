@@ -4,6 +4,7 @@ using Core.Interfaces;
 using Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
 using SKINET.Dtos;
+using SKINET.Helpers;
 
 namespace SKINET.Controllers
 {
@@ -27,11 +28,13 @@ namespace SKINET.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<ProductToReturnDto>>> GetProducts([FromQuery]ProductSpecParams productParams)
+        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery]ProductSpecParams productParams)
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(productParams);
-
+            var countSpec = new ProductWithFilterAndCountSpecification(productParams);
+            var totalItems = await _productRepo.CountAsync(spec);
             var products = await _productRepo.ListAsync(spec);
+            var data 
             return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products));
         }
 
