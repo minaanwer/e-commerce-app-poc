@@ -15,5 +15,8 @@ namespace Core.Specifications
         Expression<Func<T,object>> orderBy { get; }
         Expression<Func<T, object>> orderByDescending { get; }
 
+        int Take { get; }
+        int Skip { get; }
+        bool IsPagingEnabled { get; }
     }
 }
