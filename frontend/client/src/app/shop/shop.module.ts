@@ -7,8 +7,6 @@ import { ProductItemComponent } from './product-item/product-item.component';
 
 @NgModule({
   declarations: [
-
-
     ShopComponent,
       ProductItemComponent
   ],
