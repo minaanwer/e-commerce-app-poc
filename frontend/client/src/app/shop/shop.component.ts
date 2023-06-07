@@ -17,8 +17,8 @@ export class ShopComponent implements OnInit {
   products: Product[] = [];
   brands: Brand[] = [];
   types: Type[] = [];
-  brandIdSelected:number=0;
-  typeIdSelected:number=0;
+  brandIdSelected=0;
+  typeIdSelected=0;
 
   ngOnInit(): void {
     this.getProducts();

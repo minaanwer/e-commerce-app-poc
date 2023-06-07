@@ -10,7 +10,7 @@ namespace Core.Entities
     public class BaseEntity
     {
 
-        [JsonPropertyName("Id")]
+      
         public int Id { get; set; }
 
     }

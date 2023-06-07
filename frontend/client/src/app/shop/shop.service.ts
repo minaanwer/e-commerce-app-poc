@@ -23,6 +23,7 @@ export class ShopService {
     if(typeId)
       params.append('typeId',typeId);
 
+    alert("brand id "+brandId);
     return this.http.get<Pagination<Product>>(this.baseUrl+"products",{params});
   }
   getBrands(){

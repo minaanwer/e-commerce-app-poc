@@ -14,7 +14,7 @@
       <ul class="list-group my-3">
         <li class="list-group-item "
             *ngFor="let brand of brands"
-            [class.active]="brandIdSelected==brand.id"
+            [class.active]="brandIdSelected===brand.id"
             [value]="brand.id"
             (click)="OnBrandSelected(brand.id)"
         >{{brand.name}}</li>
