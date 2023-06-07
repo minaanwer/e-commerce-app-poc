@@ -17,9 +17,9 @@ namespace Core.Specifications
             base.AddOrderBy(x => x.Name);
             base.ApplyPaging(productParams.PageSize * (productParams.PageIndex - 1), productParams.PageSize);
 
-            if (!string.IsNullOrEmpty(productParams.Sort))
+            if (!string.IsNullOrEmpty(productParams.sort))
             {
-                switch (productParams.Sort)
+                switch (productParams.sort)
                 {
                     case "priceAsc":
                         AddOrderBy(p => p.Price);

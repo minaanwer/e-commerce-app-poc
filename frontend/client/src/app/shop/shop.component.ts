@@ -11,14 +11,20 @@ import {Brand} from "../share/models/brand";
 })
 export class ShopComponent implements OnInit {
 
-  constructor(private shopservice: ShopService) {
+  constructor(private shopService: ShopService) {
   }
 
   products: Product[] = [];
   brands: Brand[] = [];
   types: Type[] = [];
-  brandIdSelected=0;
-  typeIdSelected=0;
+  brandIdSelected = 0;
+  typeIdSelected = 0;
+  sortSelected = "";
+  sortOptions = [
+    {name: "Alphabetical", value: "name"},
+    {name: "Price: Low to high", value: "priceAsc"},
+    {name: "Price: High to Low", value: "priceDesc"}
+  ];
 
   ngOnInit(): void {
     this.getProducts();
@@ -27,7 +33,7 @@ export class ShopComponent implements OnInit {
   }
 
   getProducts() {
-    this.shopservice.getProducts(this.brandIdSelected,this.typeIdSelected).subscribe({
+    this.shopService.getProducts(this.brandIdSelected, this.typeIdSelected, this.sortSelected).subscribe({
       next: (response) => {
         console.log(response.data);
         this.products = response.data;
@@ -36,15 +42,16 @@ export class ShopComponent implements OnInit {
         console.log(error)
       },
       complete: () => {
+        console.log("completed")
       }
     });
   }
 
   getBrands() {
-    this.shopservice.getBrands().subscribe({
+    this.shopService.getBrands().subscribe({
       next: (response) => {
         console.log(response);
-        this.brands = [{id:0,name:"all"},...response];
+        this.brands = [{id: 0, name: "all"}, ...response];
       },
       error: (error) => {
         console.log(error)
@@ -55,10 +62,10 @@ export class ShopComponent implements OnInit {
   }
 
   getTypes() {
-    this.shopservice.getTypes().subscribe({
+    this.shopService.getTypes().subscribe({
       next: (response) => {
         console.log(response);
-        this.types = [{id:0,name:'all'},...response];
+        this.types = [{id: 0, name: 'all'}, ...response];
       },
       error: (error) => {
         console.log(error)
@@ -68,12 +75,20 @@ export class ShopComponent implements OnInit {
     });
   }
 
- OnBrandSelected(brandId:number){
+  OnBrandSelected(brandId: number) {
     this.brandIdSelected = brandId;
+    console.log("OnBrandSelected"+brandId);
     this.getProducts();
- }
-  OnTypeSelected(typeId:number){
+  }
+
+  OnTypeSelected(typeId: number) {
     this.typeIdSelected = typeId;
+    this.getProducts();
+  }
+
+  OnSortSelected(event: any) {
+    this.sortSelected = event.target.value;
+    console.log("event.target.value : "+event.target.value);
     this.getProducts();
   }
 }

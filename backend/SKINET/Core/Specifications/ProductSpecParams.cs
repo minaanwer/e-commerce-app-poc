@@ -1,4 +1,6 @@
-﻿namespace Core.Specifications
+﻿using System.Text.Json.Serialization;
+using System.Xml.Linq;
+ namespace Core.Specifications
 {
     public class ProductSpecParams
     {
@@ -16,8 +18,14 @@
                 _pageSize = value > MaxPageSize ? MaxPageSize : value;
             }
         }
-        public string Sort { get; set; } = "";
-        public int? brandId { get; set; }
+        
+       
+      
+        public string sort { get; set; } = "";
+
+         public int? brandId { get; set; }
+
+       
         public int? typeId { get; set; }
         private string _search="";
         public string Search
