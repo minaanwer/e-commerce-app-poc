@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ShopComponent } from './shop.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import {FormsModule} from "@angular/forms";
+import {ShareModule} from "../share/share.module";
 
 
 
@@ -13,7 +14,8 @@ import {FormsModule} from "@angular/forms";
   ],
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        ShareModule
     ],
   exports:[
     ShopComponent
