@@ -4,6 +4,7 @@ import {Pagination} from "../share/models/pagination";
 import {Product} from "../share/models/product";
 import {Type} from "../share/models/type";
 import {Brand} from "../share/models/brand";
+import {ShopParams} from "../share/models/shopParams";
 
 @Injectable({
   providedIn: 'root'
@@ -14,24 +15,29 @@ export class ShopService {
 
   constructor(private http: HttpClient) {}
 
-  getProducts(brandId?: number, typeId?: number, sort?: string) {
+  getProducts(shopParams:ShopParams) {
     let params = new HttpParams();
-    let param ="?";
-    if (brandId) {
-      param+=("brandId="+brandId+"&");
-      params.append('brandId', brandId);
+    let paramAsStr ="?";
+    if (shopParams.brandId>0) {
+      paramAsStr+=("brandId="+shopParams.brandId+"&");
+      params.append('brandId', shopParams.brandId);
     }
-    if (typeId) {
-      param += ("typeId=" + typeId+"&");
-      params.append('typeId', typeId);
+    if (shopParams.typeId>0) {
+      paramAsStr += ("typeId=" + shopParams.typeId+"&");
+      params.append('typeId', shopParams.typeId);
     }
-    if (sort) {
-      param+=("sort="+sort);
-      params.append('sort', sort);
+    if (shopParams.sort !="") {
+      paramAsStr+=("sort="+shopParams.sort+"&");
+      params.append('sort', shopParams.sort);
     }
-    if(param=="?") param="";
-    console.log("param"+ param)
-    return this.http.get<Pagination<Product>>(this.baseUrl + "Products"+param);
+    paramAsStr+=("pageIndex="+shopParams.pageNumber+"&");
+    paramAsStr+=("pageSize="+shopParams.pageSize);
+
+    if(paramAsStr=="?") paramAsStr="";
+
+    console.log("paramAsStr:"+ paramAsStr);
+
+    return this.http.get<Pagination<Product>>(this.baseUrl + "Products"+paramAsStr);
   }
 
   getBrands() {
