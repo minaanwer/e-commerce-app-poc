@@ -1,17 +1,10 @@
 <div class="container">
   <div class="row">
     <section class="col-3">
-
       <h5 class="text-warning ms-3">Sort</h5>
       <select (change)="OnSortSelected($event)" class="form-select mb-4">
-        <option *ngFor="let sort of sortOptions" [value]="sort.value"
-                selected
-
-
-        >{{sort.name}}</option>
-
+        <option *ngFor="let sort of sortOptions" [value]="sort.value" selected>{{sort.name}}</option>
       </select>
-
 
       <h5 class="text-warning ms-3">Brands</h5>
       <ul class="list-group my-3">
@@ -31,22 +24,18 @@
             [value]="type.id"
             class="list-group-item"
         >{{type.name}} </li>
-
       </ul>
 
     </section>
 
     <section class="col-9">
       <div class="d-flex justify-content-between align-items-center pb-2">
-        <header>
-          <span *ngIf="totalCount>0">showing
-            <strong>
-            {{(shopParams.pageNumber - 1) * shopParams.pageSize + 1  }} -
-              {{shopParams.pageNumber * shopParams.pageSize}}
-          </strong>
-            of <strong>{{totalCount}}</strong> Results </span>
-          <span *ngIf="totalCount===0"> there are <strong>0</strong> results for this filter </span>
-        </header>
+       <app-paging-header
+       [totalCount]="totalCount"
+       [pageNumber]="shopParams.pageNumber"
+       [pageSize]="shopParams.pageSize"
+       ></app-paging-header>
+
         <div class="d-flex mt-2">
           <input class="form-control me-2" placeholder="Search" type="text">
           <button class="btn btn-outline-primary mx-2">Search</button>
@@ -73,7 +62,5 @@
         previousText="&lsaquo;">
       </pagination>
     </div>
-
-
   </div>
 </div>
