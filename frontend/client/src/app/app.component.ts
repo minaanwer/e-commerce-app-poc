@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {Pagination} from "./share/models/pagination";
 
 @Component({
   selector: 'app-root',

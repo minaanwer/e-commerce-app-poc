@@ -4,18 +4,22 @@ import { ShopComponent } from './shop.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import {FormsModule} from "@angular/forms";
 import {ShareModule} from "../share/share.module";
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import {RouterModule} from "@angular/router";
 
 
 
 @NgModule({
   declarations: [
     ShopComponent,
-      ProductItemComponent
+      ProductItemComponent,
+      ProductDetailsComponent
   ],
     imports: [
         CommonModule,
         FormsModule,
-        ShareModule
+        ShareModule,
+       RouterModule
     ],
   exports:[
     ShopComponent
