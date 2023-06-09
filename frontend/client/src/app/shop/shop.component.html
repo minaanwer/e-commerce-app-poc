@@ -37,9 +37,9 @@
        ></app-paging-header>
 
         <div class="d-flex mt-2">
-          <input class="form-control me-2" placeholder="Search" type="text">
-          <button class="btn btn-outline-primary mx-2">Search</button>
-          <button class="btn btn-outline-success">Reset</button>
+          <input class="form-control me-2" placeholder="Search" type="text" #search>
+          <button (click)="OnSearch()" class="btn btn-outline-primary mx-2">Search</button>
+          <button (click)="OnReset()" class="btn btn-outline-success">Reset</button>
         </div>
       </div>
 
@@ -50,17 +50,11 @@
       </div>
     </section>
     <div class="d-flex justify-content-center mt-4" *ngIf="totalCount>0">
-      <pagination
-        (pageChanged)="OnPageChanged($event)"
-        [boundaryLinks]="true"
-        [itemsPerPage]="shopParams.pageSize"
-        [maxSize]="10"
-        [totalItems]="totalCount"
-        firstText="&laquo;"
-        lastText="&raquo;"
-        nextText="&rsaquo;"
-        previousText="&lsaquo;">
-      </pagination>
+     <app-pager
+     [totalCount]="totalCount"
+     [pageSize]="shopParams.pageSize"
+     (pageChanged)="OnPageChanged($event)"
+     ></app-pager>
     </div>
   </div>
 </div>
