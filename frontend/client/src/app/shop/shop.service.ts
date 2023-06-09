@@ -30,6 +30,10 @@ export class ShopService {
       paramAsStr+=("sort="+shopParams.sort+"&");
       params.append('sort', shopParams.sort);
     }
+    if (shopParams.search !="") {
+      paramAsStr+=("search="+shopParams.search+"&");
+      params.append('search', shopParams.search);
+    }
     paramAsStr+=("pageIndex="+shopParams.pageNumber+"&");
     paramAsStr+=("pageSize="+shopParams.pageSize);
 
