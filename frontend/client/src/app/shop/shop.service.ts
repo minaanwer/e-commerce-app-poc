@@ -5,6 +5,7 @@ import {Product} from "../share/models/product";
 import {Type} from "../share/models/type";
 import {Brand} from "../share/models/brand";
 import {ShopParams} from "../share/models/shopParams";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -43,6 +44,11 @@ export class ShopService {
 
     return this.http.get<Pagination<Product>>(this.baseUrl + "Products"+paramAsStr);
   }
+
+  getProduct(id:number):Observable<Product>{
+    return this.http.get<Product>(this.baseUrl+"products/"+id);
+  }
+
 
   getBrands() {
     return this.http.get<Brand[]>(this.baseUrl + "products/brands");
