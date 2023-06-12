@@ -29,7 +29,7 @@ export class TestErrorComponent {
   }
 
   get500Error(){
-    this.http.get<Product>(this.baseUrl+"buggy/servererror").subscribe({
+    this.http.get<Product>(this.baseUrl+"Buggy/servererror").subscribe({
       next:(response)=>{
         console.log(response);
       },
@@ -42,7 +42,7 @@ export class TestErrorComponent {
 
 
   get400Error(){
-    this.http.get<Product>(this.baseUrl+"buggy/badrequest").subscribe({
+    this.http.get<Product>(this.baseUrl+"Buggy/badrequest").subscribe({
       next:(response)=>{
         console.log(response);
       },
