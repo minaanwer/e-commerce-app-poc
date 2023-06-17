@@ -10,7 +10,7 @@ import {Product} from "../../share/models/product";
 })
 export class TestErrorComponent {
   baseUrl = environment.apiUrl;
-
+  validationErros:string[]=[];
   constructor(private http:HttpClient) {
 
   }
@@ -60,6 +60,7 @@ export class TestErrorComponent {
       },
       error:(error)=>{
         console.log(error);
+        this.validationErros = error.errors;
       },
       complete:()=>{}
     });
