@@ -1,4 +1,19 @@
-<div class="container">
+<div class="container mt-5">
 
-  <h1>Server Error </h1>
+    <h4>internal server error - refreshing will make error disappear</h4>
+
+     <ng-container *ngIf="error">
+       <h5 class="text-danger"> Error : {{error.message}} </h5>
+       <p class="font-weight-bold"> this error comes from server </p>
+       <p>What to do next?</p>
+       <ol>
+         <li> check the network tab in chrom div tools</li>
+         <li>reproduce same request with postman</li>
+
+
+       </ol>
+       <h5> stack trace </h5>
+       <code class="mt-5" style="background:whitesmoke">{{error.detail}}</code>
+     </ng-container>
+
 </div>
