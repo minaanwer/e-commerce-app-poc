@@ -19,7 +19,10 @@ import {ToastrModule} from "ngx-toastr";
   imports: [
     CommonModule,
     RouterModule,
-    ToastrModule
+    ToastrModule.forRoot({
+      positionClass:'toast-bottom-right',
+      preventDuplicates:true
+    })
   ],
   exports:[
     NavBarComponent,

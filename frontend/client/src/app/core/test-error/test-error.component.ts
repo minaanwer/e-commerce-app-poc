@@ -22,7 +22,7 @@ export class TestErrorComponent {
         console.log(response);
       },
       error:(error)=>{
-        console.log(error());
+        console.log(error);
       },
       complete:()=>{}
     });
@@ -34,7 +34,7 @@ export class TestErrorComponent {
         console.log(response);
       },
       error:(error)=>{
-        console.log(error());
+        console.log(error);
       },
       complete:()=>{}
     });
@@ -47,7 +47,7 @@ export class TestErrorComponent {
         console.log(response);
       },
       error:(error)=>{
-        console.log(error());
+        console.log(error);
       },
       complete:()=>{}
     });
@@ -59,7 +59,7 @@ export class TestErrorComponent {
         console.log(response);
       },
       error:(error)=>{
-        console.log(error());
+        console.log(error);
       },
       complete:()=>{}
     });
