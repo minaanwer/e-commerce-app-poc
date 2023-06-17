@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3QTSlg5ofYWGKq8OEH09NpnSTzvRRVcCdA72Z5GiAkV2VcQ/TPZhVflA1E7e0yMj2tvBAFDz9mDNgyImi7ZiyQ==",
+  "dgSpecHash": "8LfHRXV0m1WaKQxHWMiuC8Omw0RxEKPKcHBC2cxlBpofIV0RCYBOLUkdKRPGh0CLes1Fej3YMj77NmAJC3FEgQ==",
   "success": true,
   "projectFilePath": "D:\\Githup Repo\\2023-dev\\e-commerce-app-poc\\backend\\SKINET\\Core\\Core.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,10 @@
     "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
-    "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\m.lewes\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\m.lewes\\.nuget\\packages\\stackexchange.redis\\2.6.116\\stackexchange.redis.2.6.116.nupkg.sha512",
+    "C:\\Users\\m.lewes\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -70,6 +70,12 @@ D:\Githup Repo\2023-dev\2023-dev\e-commerce app POC\backend\SKINET\SKINET\obj\De
 D:\Githup Repo\2023-dev\2023-dev\e-commerce app POC\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.pdb
 D:\Githup Repo\2023-dev\2023-dev\e-commerce app POC\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.genruntimeconfig.cache
 D:\Githup Repo\2023-dev\2023-dev\e-commerce app POC\backend\SKINET\SKINET\obj\Debug\net7.0\ref\SKINET.dll
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.csproj.AssemblyReference.cache
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.GeneratedMSBuildEditorConfig.editorconfig
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.AssemblyInfoInputs.cache
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.AssemblyInfo.cs
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.csproj.CoreCompileInputs.cache
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.MvcApplicationPartsAssemblyInfo.cache
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\appsettings.Development.json
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\appsettings.json
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\SKINET.staticwebassets.runtime.json
@@ -91,9 +97,11 @@ D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Microsoft.OpenApi.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\SQLitePCLRaw.core.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\StackExchange.Redis.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -125,13 +133,6 @@ D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Infrastructure.dll
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Infrastructure.pdb
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\bin\Debug\net7.0\Core.pdb
-D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.csproj.AssemblyReference.cache
-D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.GeneratedMSBuildEditorConfig.editorconfig
-D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.AssemblyInfoInputs.cache
-D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.AssemblyInfo.cs
-D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.csproj.CoreCompileInputs.cache
-D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.MvcApplicationPartsAssemblyInfo.cs
-D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.MvcApplicationPartsAssemblyInfo.cache
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\staticwebassets\msbuild.SKINET.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\staticwebassets\msbuild.build.SKINET.props
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SKINET.props
@@ -146,3 +147,4 @@ D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.pdb
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.genruntimeconfig.cache
 D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\ref\SKINET.dll
+D:\Githup Repo\2023-dev\e-commerce-app-poc\backend\SKINET\SKINET\obj\Debug\net7.0\SKINET.MvcApplicationPartsAssemblyInfo.cs

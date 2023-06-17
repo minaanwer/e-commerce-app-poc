@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "n7mC4LRiXLvT2DrhYW6AaDjQqBwGPuGJWuvnpFUR7WyUAA3SjwC3mCb6px6mStmdhCYb1t/puXSE82fvXZMh5A==",
+  "dgSpecHash": "TM6X7yYZwWfXOUf7xwwYu+GVhO/eW1opiv/7/LEgwcntk5IIkH38E8D2iU8MRTFlDQv7vQ17P9TKavoYlqR5iQ==",
   "success": true,
   "projectFilePath": "D:\\Githup Repo\\2023-dev\\e-commerce-app-poc\\backend\\SKINET\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -27,11 +27,14 @@
     "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\m.lewes\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.4\\sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.4\\sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\m.lewes\\.nuget\\packages\\stackexchange.redis\\2.6.116\\stackexchange.redis.2.6.116.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\m.lewes\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\m.lewes\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
