@@ -8,7 +8,7 @@ import {ToastrService} from "ngx-toastr";
 })
 export class HomeComponent {
   constructor(private toastr:ToastrService) {
-     this.toastr.show("hi i'm working");
+     //this.toastr.show("hi i'm working");
   }
 
 }
