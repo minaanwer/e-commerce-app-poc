@@ -12,12 +12,12 @@ namespace Core.Entities
         {
              
         }
-        public CustomerBasket(int id )
+        public CustomerBasket(string id )
         {
             Id = id;      
         }
 
-        public int Id { get; set; }
+        public string Id { get; set; }
         public  List<BasketItems>items { get; set; } = new List<BasketItems>();
     }
 }
